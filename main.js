@@ -9,7 +9,19 @@ var coffeeShop = {
   },
 
   makeDrink: function (drinkType) {
-    // TODO: Finish this method
+    if(drinkType in coffeeShop.drinkRequirements) {
+      if(this.beans-this.drinkRequirements[drinkType]<0)  {
+        alert('sry no beans');
+      }
+      else  {
+        this.beans -= this.drinkRequirements[drinkType];
+        alert(this.beans);
+      }
+      
+    }
+    else  {
+      alert("Sorry, we don't make " + drinkType);
+    }
   }
 }
 
